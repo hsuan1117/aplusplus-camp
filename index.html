@@ -10,7 +10,8 @@
     <meta name="description" content="Web開發挑戰營"/>
     <meta name="keywords" content="暑假營隊, 高中生營隊, 營隊, 學習歷程"/>
     <meta name="author" content="A++程式設計"/>
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <!--<link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>-->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!--Replace with your tailwind.css once created-->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet"/>
     <link rel="stylesheet"
@@ -20,12 +21,14 @@
         .gradient {
             background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
         }
+
         body {
             font-family: 'Noto Sans TC', serif;
         }
     </style>
 </head>
-<body class="leading-normal tracking-normal text-white gradient" style="/*font-family: 'Source Sans Pro', sans-serif;*/">
+<body class="leading-normal tracking-normal text-white gradient"
+      style="/*font-family: 'Source Sans Pro', sans-serif;*/">
 <!--Nav-->
 <nav id="header" class="fixed w-full z-30 top-0 text-white">
     <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
@@ -51,7 +54,7 @@
                 </svg>
             </button>
         </div>
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
+        <div class="w-full grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
              id="nav-content">
             <ul class="list-reset lg:flex justify-end flex-1 items-center">
                 <li class="mr-3">
@@ -64,15 +67,16 @@
                 </li>
                 <li class="mr-3">
                     <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                       href="#"></a>
+                       href="#courses">課程</a>
                 </li>
             </ul>
-            <button
+            <a
                     id="navAction"
-                    class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+                    class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+                    href="#pricing"
             >
-                報名
-            </button>
+                瞭解價格
+            </a>
         </div>
     </div>
     <hr class="border-b border-gray-100 opacity-25 my-0 py-0"/>
@@ -91,8 +95,8 @@
             </p>
             <a
                     href="#pricing"
-                    class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                報名
+                    class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                瞭解價格
             </a>
         </div>
         <!--Right Col-->
@@ -124,7 +128,7 @@
     </svg>
 </div>
 <section class="bg-white border-b py-8" id="features">
-    <div class="container max-w-5xl mx-auto m-8">
+    <div class="container max-w-5xl mx-auto m-8 mb-3">
         <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
             營隊特色
         </h1>
@@ -133,7 +137,7 @@
         </div>
 
         <div class="flex flex-wrap">
-            <div class="w-full sm:w-1/2 md:p-6 pb-0">
+            <div class="w-full sm:w-1/2 md:p-6 pb-0 border-2 border-black-200 rounded-xl">
                 <img src="img/website.png" class="w-full sm:h-64 mx-auto" alt="Website"/>
             </div>
             <div class="w-5/6 sm:w-1/2 p-6">
@@ -170,7 +174,7 @@
             </div>
         </div>-->
         <div class="flex flex-wrap md:flex-row-reverse">
-            <div class="w-full sm:w-1/2 md:mt-6 md:p-6 pb-0">
+            <div class="w-full sm:w-1/2 md:mt-6 md:p-6 pb-0 border-2 border-black-200 rounded-xl">
                 <img class="w-5/6 sm:h-64 mx-auto" src="img/pay.png" alt="可負擔的價格"/>
             </div>
             <div class="w-full sm:w-1/2 p-6">
@@ -179,95 +183,92 @@
                         可負擔的價格
                     </h3>
                     <p class="text-gray-600 mb-8">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo
-                        posuere et sit amet ligula.
+                        我們的目的不是營利，期待以最低的價格提供同學最好的課程。
                         <br/>
                         <br/>
-                        Images from:
-
-                        <a class="text-pink-500 underline" href="https://undraw.co/">undraw.co</a>
                     </p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="bg-white border-b py-8">
+<section class="bg-white border-b py-8" id="courses">
     <div class="container mx-auto flex flex-wrap pt-4 pb-12">
         <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-            Title
+            營隊課程
         </h1>
         <div class="w-full mb-4">
             <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+        <div class="w-full md:w-1/3 p-6 flex flex-col grow flex-shrink">
             <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
                 <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-                    <p class="w-full text-gray-600 text-xs md:text-sm px-6">
-                        xGETTING STARTED
-                    </p>
-                    <div class="w-full font-bold text-xl text-gray-800 px-6">
-                        Lorem ipsum dolor sit amet.
+                    <div class="w-full font-bold text-2xl px-6 my-4 text-emerald-600">
+                        網站架構揭密
                     </div>
                     <p class="text-gray-800 text-base px-6 mb-5">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo
-                        posuere et sit amet ligula.
+                        透過幾堂基礎課程讓學生了解現今網站都是如何製作而成的，同時讓學生知道網站架設的架構<br>
                     </p>
+                    <div class="md:p-6 pb-6 ml-auto mr-auto">
+                        <img src="img/icon-html.svg" class="w-full h-48 mx-auto" alt="Website"/>
+                    </div>
                 </a>
             </div>
+            <!--
             <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
                 <div class="flex items-center justify-start">
                     <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                         Action
                     </button>
                 </div>
-            </div>
+            </div>-->
         </div>
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+        <div class="w-full md:w-1/3 p-6 flex flex-col grow flex-shrink">
             <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
                 <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-                    <p class="w-full text-gray-600 text-xs md:text-sm px-6">
-                        xGETTING STARTED
-                    </p>
-                    <div class="w-full font-bold text-xl text-gray-800 px-6">
-                        Lorem ipsum dolor sit amet.
+                    <div class="w-full font-bold text-2xl text-violet-600 px-6 my-4">
+                        網站前端教學
                     </div>
                     <p class="text-gray-800 text-base px-6 mb-5">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo
-                        posuere et sit amet ligula.
+                        你知道網站前端現在最流行的是哪三個框架嗎?<br/>
+                        在這幾堂課程中會讓學生清楚的了解現代網站前端的建置，並透過實際專案，讓學生實作
                     </p>
+                    <div class="md:p-6 pb-6 ml-auto mr-auto">
+                        <img src="img/vue.png" class="w-full h-48 mx-auto" alt="Website"/>
+                    </div>
                 </a>
             </div>
+            <!--
             <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
                 <div class="flex items-center justify-center">
                     <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                         Action
                     </button>
                 </div>
-            </div>
+            </div>-->
         </div>
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+        <div class="w-full md:w-1/3 p-6 flex flex-col grow flex-shrink">
             <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
                 <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-                    <p class="w-full text-gray-600 text-xs md:text-sm px-6">
-                        xGETTING STARTED
-                    </p>
-                    <div class="w-full font-bold text-xl text-gray-800 px-6">
-                        Lorem ipsum dolor sit amet.
+                    <div class="w-full font-bold text-2xl text-cyan-600 px-6 my-4">
+                        網站後端教學
                     </div>
                     <p class="text-gray-800 text-base px-6 mb-5">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo
-                        posuere et sit amet ligula.
+                        透過實際的專案讓學生了解如何去建構網站後端<br><br>
                     </p>
+                    <div class="md:p-6 pb-6 ml-auto mr-auto">
+                        <img src="img/laravel.png" class="w-full h-48 mx-auto" alt="Website"/>
+                    </div>
                 </a>
             </div>
+            <!--
             <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
                 <div class="flex items-center justify-end">
                     <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                         Action
                     </button>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 </section>
@@ -279,17 +280,17 @@
         <div class="w-full mb-4">
             <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+        <div class="w-full md:w-1/3 p-6 flex flex-col grow flex-shrink">
             <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
                 <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-                    <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+                    <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-2">
                         清華大學
                     </p>
-                    <div class="w-full font-bold text-xl text-gray-800 px-6">
+                    <div class="w-full font-bold text-xl text-gray-800 px-6 my-1">
                         Hsuan
                     </div>
                     <p class="text-gray-800 text-base px-6 mb-5">
-                        特殊選才
+                        國中開始學習網站架設，擁有4年以上網站開發經驗，熟稔網站維運及資安方面技術。
                     </p>
                 </a>
             </div>
@@ -302,18 +303,17 @@
                 </div>
             </div>-->
         </div>
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+        <div class="w-full md:w-1/3 p-6 flex flex-col grow flex-shrink">
             <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
                 <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-                    <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+                    <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-2">
                         清華大學
                     </p>
-                    <div class="w-full font-bold text-xl text-gray-800 px-6">
+                    <div class="w-full font-bold text-xl text-gray-800 px-6 my-1">
                         RuRu7
                     </div>
                     <p class="text-gray-800 text-base px-6 mb-5">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo
-                        posuere et sit amet ligula.
+                        從國中開始就接觸程式設計，曾為資訊奧林匹亞一階選訓營學生
                     </p>
                 </a>
             </div>
@@ -326,18 +326,17 @@
                 </div>
             </div>-->
         </div>
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+        <div class="w-full md:w-1/3 p-6 flex flex-col grow flex-shrink">
             <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
                 <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-                    <p class="w-full text-gray-600 text-xs md:text-sm px-6">
-                        xGETTING STARTED
+                    <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-2">
+                        中央大學
                     </p>
-                    <div class="w-full font-bold text-xl text-gray-800 px-6">
-                        Lorem ipsum dolor sit amet.
+                    <div class="w-full font-bold text-xl text-gray-800 px-6 my-1">
+                        Neodoggy
                     </div>
                     <p class="text-gray-800 text-base px-6 mb-5">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo
-                        posuere et sit amet ligula.
+                        資深的網站設計師，創作專案無數。
                     </p>
                 </a>
             </div>
@@ -360,62 +359,18 @@
         <div class="w-full mb-4">
             <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
-        <div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
+        <div class="flex flex-col sm:flex-row justify-center pt-12 my-4">
             <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
                 <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
                     <div class="p-8 text-3xl font-bold text-center border-b-4">
-                        早鳥報名
+                        正規報名
                     </div>
                     <ul class="w-full text-center text-sm">
-                        <li class="border-b py-4">Thing</li>
-                        <li class="border-b py-4">Thing</li>
-                        <li class="border-b py-4">Thing</li>
-                    </ul>
-                </div>
-                <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-                    <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
-                        NT$ 5000
-                        <span class="text-base">/ 每人</span>
-                    </div>
-                    <div class="flex items-center justify-center">
-                        <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                            Sign Up
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 shadow-lg z-10">
-                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-                    <div class="w-full p-8 text-3xl font-bold text-center">正規報名</div>
-                    <div class="h-1 w-full gradient my-0 py-0 rounded-t"></div>
-                    <ul class="w-full text-center text-base font-bold">
-                        <li class="border-b py-4">Thing</li>
-                        <li class="border-b py-4">Thing</li>
-                        <li class="border-b py-4">Thing</li>
-                        <li class="border-b py-4">Thing</li>
-                    </ul>
-                </div>
-                <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-                    <div class="w-full pt-6 text-4xl font-bold text-center">
-                        NT$ 10000
-                        <span class="text-base">/ 每人</span>
-                    </div>
-                    <div class="flex items-center justify-center">
-                        <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                            Sign Up
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
-                <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
-                    <div class="p-8 text-3xl font-bold text-center border-b-4">
-                        團報享優惠
-                    </div>
-                    <ul class="w-full text-center text-sm">
-                        <li class="border-b py-4">Thing</li>
-                        <li class="border-b py-4">Thing</li>
-                        <li class="border-b py-4">Thing</li>
+                        <li class="border-b py-4 font-bold">6/1 報名截止</li>
+                        <li class="border-b py-4">7/1 - 7/3 共三天</li>
+                        <li class="border-b py-4">含午餐</li>
+                        <li class="border-b py-4">一個專屬於你的網站</li>
+                        <li class="border-b py-4">精美的營隊研習證明</li>
                     </ul>
                 </div>
                 <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
@@ -425,14 +380,108 @@
                     </div>
                     <div class="flex items-center justify-center">
                         <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                            Sign Up
+                            填寫報名表
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 shadow-lg z-10">
+                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+                    <div class="w-full p-8 text-3xl font-bold text-center">早鳥報名</div>
+                    <div class="h-1 w-full gradient my-0 py-0 rounded-t"></div>
+                    <ul class="w-full text-center text-base">
+                        <li class="border-b py-4 font-bold text-red-400">限時優惠!! 只到4/30</li>
+                        <li class="border-b py-4">7/1 - 7/3 共三天</li>
+                        <li class="border-b py-4">含午餐</li>
+                        <li class="border-b py-4">一個專屬於你的網站</li>
+                        <li class="border-b py-4">精美的營隊研習證明</li>
+                        <li class="border-b py-4">✨精美小禮</li>
+                    </ul>
+                </div>
+                <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+                    <div class="w-full pt-6 text-4xl font-bold text-center">
+                        NT$ 5000
+                        <span class="text-base">/ 每人</span>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                            填寫報名表
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
+                <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
+                    <div class="p-8 text-3xl font-bold text-center border-b-4">
+                        團報優惠
+                    </div>
+                    <ul class="w-full text-center text-sm">
+                        <li class="border-b py-4 font-bold">三人以上享優惠</li>
+                        <li class="border-b py-4">7/1 - 7/3 共三天</li>
+                        <li class="border-b py-4">含午餐</li>
+                        <li class="border-b py-4">一個專屬於你的網站</li>
+                        <li class="border-b py-4">精美的營隊研習證明</li>
+                    </ul>
+                </div>
+                <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+                    <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
+                        NT$ 4000
+                        <span class="text-base">/ 每人</span>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                            填寫報名表
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="pt-8">
-            <a href="#" class="text-sm">* 針對弱勢族群亦有弱勢方案，請直接聯絡我們</a>
+        <div class="flex flex-col justify-center align-center">
+            <div class="flex flex-col w-5/6 mx-auto mb-3 text-xl cursor-pointer" id="btn_show_others">
+                ▶ 查看其他方案
+            </div>
+        </div>
+        <div class="flex flex-col w-5/6 mx-auto mb-3 hidden" id="online_course">
+            <div class="flex-1 bg-white text-gray-600 rounded-t overflow-hidden shadow">
+                <div class="p-4 text-3xl font-bold text-center border-b-4">
+                    線上班
+                </div>
+                <ul class="w-full text-center text-sm">
+                    <li class="border-b py-4 px-2">與實體營隊課程完全相同，提供給無法來台南實體的學生們!</li>
+                </ul>
+            </div>
+            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6 pb-1">
+                <div class="w-full pt-1 text-3xl text-gray-600 font-bold text-center">
+                    NT$ 5500
+                    <span class="text-base">/ 每人</span>
+                </div>
+                <div class="flex items-center justify-center">
+                    <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                        填寫報名表
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col w-5/6 mx-auto hidden" id="inclass_sales">
+            <div class="flex-1 bg-white text-gray-600 rounded-t overflow-hidden shadow">
+                <div class="p-4 text-3xl font-bold text-center border-b-4">
+                    班內生特惠
+                </div>
+                <ul class="w-full text-center text-sm">
+                    <li class="border-b py-4">憑A++程式設計上課證</li>
+                </ul>
+            </div>
+            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6 pb-1">
+                <div class="w-full pt-1 text-3xl text-gray-600 font-bold text-center">
+                    NT$ 3000
+                    <span class="text-base">/ 每人</span>
+                </div>
+                <div class="flex items-center justify-center">
+                    <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                        填寫報名表
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -463,16 +512,17 @@
 </svg>
 <section class="container mx-auto text-center py-6 mb-12">
     <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
-        Call to Action
+        7/1 到 7/3 等你來+1
     </h1>
     <div class="w-full mb-4">
         <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
     </div>
-    <h3 class="my-4 text-3xl leading-tight">
-        Main Hero Message to sell yourself!
+    <h3 class="my-4 text-3xl leading-10">
+        不要錯過你任何一個暑假<br/>
+        把握這個贏在起跑點的機會
     </h3>
     <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-        Action!
+        現在報名!
     </button>
 </section>
 <!--Footer-->
@@ -491,64 +541,24 @@
                     Web開發挑戰營
                 </a>
             </div>
-            <div class="flex-1">
-                <p class="uppercase text-gray-500 md:mb-6">Links</p>
+            <div class="">
+                <p class="uppercase text-gray-500 md:mb-6">網站連結</p>
                 <ul class="list-reset mb-6">
                     <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">FAQ</a>
+                        <a href="https://aplusplus.education?utm_source=WebCamp&utm_medium=website&utm_campaign=website"
+                           class="no-underline hover:underline text-gray-800 hover:text-pink-500" target="_blank">A++程式設計</a>
                     </li>
-                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Help</a>
-                    </li>
-                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Support</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="flex-1">
-                <p class="uppercase text-gray-500 md:mb-6">Legal</p>
-                <ul class="list-reset mb-6">
-                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Terms</a>
-                    </li>
-                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Privacy</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="flex-1">
-                <p class="uppercase text-gray-500 md:mb-6">Social</p>
-                <ul class="list-reset mb-6">
-                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
-                    </li>
-                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Linkedin</a>
-                    </li>
-                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Twitter</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="flex-1">
-                <p class="uppercase text-gray-500 md:mb-6">Company</p>
-                <ul class="list-reset mb-6">
-                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Official
-                            Blog</a>
-                    </li>
+                    <!--
                     <li class="mt-2 inline-block mr-2 md:block md:mr-0">
                         <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">About Us</a>
                     </li>
                     <li class="mt-2 inline-block mr-2 md:block md:mr-0">
                         <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
         </div>
     </div>
-    <a href="https://www.freepik.com/free-photos-vectors/background" class="text-gray-500">Background vector created by
-        freepik - www.freepik.com</a>
 </footer>
 <!-- jQuery if you need it
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -560,6 +570,18 @@
     var navaction = document.getElementById("navAction");
     var brandname = document.getElementById("brandname");
     var toToggle = document.querySelectorAll(".toggleColour");
+
+    document.querySelector('#btn_show_others').addEventListener('click', ()=>{
+        if(document.querySelector('#inclass_sales').style.display === 'none') {
+            document.querySelector('#btn_show_others').innerText = '▼ 查看其他方案'
+            document.querySelector('#inclass_sales').style.display = 'block'
+            document.querySelector('#online_course').style.display = 'block'
+        } else {
+            document.querySelector('#btn_show_others').innerText = '▶ 查看其他方案'
+            document.querySelector('#inclass_sales').style.display = 'none'
+            document.querySelector('#online_course').style.display = 'none'
+        }
+    })
 
     document.addEventListener("scroll", function () {
         /*Apply classes for slide in bar*/
