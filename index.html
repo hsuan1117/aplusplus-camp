@@ -137,7 +137,7 @@
         </div>
 
         <div class="flex flex-wrap">
-            <div class="w-full sm:w-1/2 md:p-6 pb-0 border-2 border-black-200 rounded-xl">
+            <div class="w-full sm:w-1/2 md:p-6 pb-0 mx-2 md:m-0 border-2 border-black-200 rounded-xl">
                 <img src="img/website.png" class="w-full sm:h-64 mx-auto" alt="Website"/>
             </div>
             <div class="w-5/6 sm:w-1/2 p-6">
@@ -174,7 +174,7 @@
             </div>
         </div>-->
         <div class="flex flex-wrap md:flex-row-reverse">
-            <div class="w-full sm:w-1/2 md:mt-6 md:p-6 pb-0 border-2 border-black-200 rounded-xl">
+            <div class="w-full sm:w-1/2 md:mt-6 md:p-6 pb-0 mx-2 md:m-0 border-2 border-black-200 rounded-xl">
                 <img class="w-5/6 sm:h-64 mx-auto" src="img/pay.png" alt="可負擔的價格"/>
             </div>
             <div class="w-full sm:w-1/2 p-6">
@@ -210,7 +210,7 @@
                         透過幾堂基礎課程讓學生了解現今網站都是如何製作而成的，同時讓學生知道網站架設的架構<br>
                     </p>
                     <div class="md:p-6 pb-6 ml-auto mr-auto">
-                        <img src="img/icon-html.svg" class="w-full h-48 mx-auto" alt="Website"/>
+                        <img src="img/icon-html.svg" class="w-auto h-48 mx-auto" alt="Website"/>
                     </div>
                 </a>
             </div>
@@ -234,7 +234,7 @@
                         在這幾堂課程中會讓學生清楚的了解現代網站前端的建置，並透過實際專案，讓學生實作
                     </p>
                     <div class="md:p-6 pb-6 ml-auto mr-auto">
-                        <img src="img/vue.png" class="w-full h-48 mx-auto" alt="Website"/>
+                        <img src="img/vue.png" class="w-auto h-48 mx-auto" alt="Website"/>
                     </div>
                 </a>
             </div>
@@ -257,7 +257,7 @@
                         透過實際的專案讓學生了解如何去建構網站後端<br><br>
                     </p>
                     <div class="md:p-6 pb-6 ml-auto mr-auto">
-                        <img src="img/laravel.png" class="w-full h-48 mx-auto" alt="Website"/>
+                        <img src="img/laravel.png" class="w-auto h-48 mx-auto" alt="Website"/>
                     </div>
                 </a>
             </div>
@@ -441,7 +441,7 @@
                 ▶ 查看其他方案
             </div>
         </div>
-        <div class="flex flex-col w-5/6 mx-auto mb-3 hidden" id="online_course">
+        <div class="flex flex-col w-5/6 mx-auto mb-3" id="online_course">
             <div class="flex-1 bg-white text-gray-600 rounded-t overflow-hidden shadow">
                 <div class="p-4 text-3xl font-bold text-center border-b-4">
                     線上班
@@ -462,7 +462,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex flex-col w-5/6 mx-auto hidden" id="inclass_sales">
+        <div class="flex flex-col w-5/6 mx-auto" id="inclass_sales">
             <div class="flex-1 bg-white text-gray-600 rounded-t overflow-hidden shadow">
                 <div class="p-4 text-3xl font-bold text-center border-b-4">
                     班內生特惠
@@ -570,6 +570,11 @@
     var navaction = document.getElementById("navAction");
     var brandname = document.getElementById("brandname");
     var toToggle = document.querySelectorAll(".toggleColour");
+
+    document.addEventListener('DOMContentLoaded', ()=>{
+        document.querySelector('#inclass_sales').style.display = 'none'
+        document.querySelector('#online_course').style.display = 'none'
+    })
 
     document.querySelector('#btn_show_others').addEventListener('click', ()=>{
         if(document.querySelector('#inclass_sales').style.display === 'none') {
