@@ -41,17 +41,18 @@
 
     <!-- Your SDK code -->
     <script>
-        window.fbAsyncInit = function() {
+        window.fbAsyncInit = function () {
             FB.init({
-                xfbml            : true,
-                version          : 'v12.0'
+                xfbml: true,
+                version: 'v12.0'
             });
         };
 
-        (function(d, s, id) {
+        (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
+            js = d.createElement(s);
+            js.id = id;
             js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js';
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
@@ -601,13 +602,13 @@
     var brandname = document.getElementById("brandname");
     var toToggle = document.querySelectorAll(".toggleColour");
 
-    document.addEventListener('DOMContentLoaded', ()=>{
+    document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('#inclass_sales').style.display = 'none'
         document.querySelector('#online_course').style.display = 'none'
     })
 
-    document.querySelector('#btn_show_others').addEventListener('click', ()=>{
-        if(document.querySelector('#inclass_sales').style.display === 'none') {
+    document.querySelector('#btn_show_others').addEventListener('click', () => {
+        if (document.querySelector('#inclass_sales').style.display === 'none') {
             document.querySelector('#btn_show_others').innerText = '▼ 查看其他方案'
             document.querySelector('#inclass_sales').style.display = 'block'
             document.querySelector('#online_course').style.display = 'block'
