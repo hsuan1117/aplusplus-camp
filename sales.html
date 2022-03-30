@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>
+        Web開發挑戰營 特惠報名表 | A++程式設計
+    </title>
+    <meta name="description" content="Web開發挑戰營"/>
+    <meta name="keywords" content="暑假營隊, 高中生營隊, 營隊, 學習歷程"/>
+    <meta name="author" content="A++程式設計"/>
+    <!--<link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Replace with your tailwind.css once created-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet"/>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Noto+Sans+TC">
+    <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
+    <style>
+        .gradient {
+            background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+        }
+
+        body {
+            font-family: 'Noto Sans TC', serif;
+        }
+    </style>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <!-- Messenger 洽談外掛程式 Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your 洽談外掛程式 code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "104843685413368");
+        chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v12.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+</head>
+<body class="leading-normal tracking-normal text-white gradient"
+      style="/*font-family: 'Source Sans Pro', sans-serif;*/">
+<!--Nav-->
+<nav id="header" class="fixed w-full z-30 top-0 text-white gradient">
+    <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+        <div class="pl-4 flex items-center">
+            <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+               href="index.html">
+                <!--Icon from: http://www.potlabicons.com/ -->
+                <svg id="icon-globe" class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24">
+                    <g class="globe1">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-2.29-2.333A17.9 17.9 0 0 1 8.027 13H4.062a8.008 8.008 0 0 0 5.648 6.667zM10.03 13c.151 2.439.848 4.73 1.97 6.752A15.905 15.905 0 0 0 13.97 13h-3.94zm9.908 0h-3.965a17.9 17.9 0 0 1-1.683 6.667A8.008 8.008 0 0 0 19.938 13zM4.062 11h3.965A17.9 17.9 0 0 1 9.71 4.333 8.008 8.008 0 0 0 4.062 11zm5.969 0h3.938A15.905 15.905 0 0 0 12 4.248 15.905 15.905 0 0 0 10.03 11zm4.259-6.667A17.9 17.9 0 0 1 15.973 11h3.965a8.008 8.008 0 0 0-5.648-6.667z"></path>
+                    </g>
+                </svg>
+                Web開發挑戰營
+            </a>
+        </div>
+        <div class="block lg:hidden pr-4">
+            <button id="nav-toggle"
+                    class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                </svg>
+            </button>
+        </div>
+        <div class="w-full grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
+             id="nav-content">
+            <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                <!--<li class="mr-3">
+                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                       href="#features">特色</a>
+                </li>-->
+            </ul>
+            <a
+                    id="navAction"
+                    class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 shadow-xl rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+                    href="index.html"
+            >
+                瞭解營隊
+            </a>
+        </div>
+    </div>
+    <hr class="border-b border-gray-100 opacity-25 my-0 py-0"/>
+</nav>
+<br/><br/>
+<section class="bg-white border-b py-8" id="terms">
+    <div class="container max-w-5xl mx-auto m-8 mb-3" id="app">
+        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+            特價優惠!
+        </h1>
+        <div class="w-full mb-4">
+            <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+
+        <div class="flex flex-wrap">
+            <div class="w-full p-6">
+                <div class="align-middle">
+                    <h3 class="text-3xl text-gray-800 font-bold leading-none mb-8">
+                        親愛的 {{ source.name }}{{ source.personCall }} 您好!
+                    </h3>
+                    <p class="text-gray-700 text-2xl mb-8 text-center">
+                        恭喜你獲得 2022 Web開發挑戰營
+                        <span class="text-2xl text-red-500 rounded-2xl inline bg-yellow-100 p-2">{{ source.sales}}</span>
+                        優惠
+                    </p>
+                    <p class="text-gray-600 text-md pl-8">
+                        我們十分期待能在營隊與您相見，點擊「Web 開發挑戰營」logo或下方按鈕即可閱覽營隊官網，裡面有許多關於營隊的訊息可讓您更加了解這營隊喔~<br/>
+                    </p>
+                    <div class="w-full text-center mb-3">
+                        <a class="text-pink-600 no-underline font-bold text-2xl inline-block border-2 p-2 my-2 rounded-xl shadow-xl"
+                           href="index.html">
+                            <svg id="icon-globe" class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 24 24">
+                                <g class="globe1">
+                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                    <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-2.29-2.333A17.9 17.9 0 0 1 8.027 13H4.062a8.008 8.008 0 0 0 5.648 6.667zM10.03 13c.151 2.439.848 4.73 1.97 6.752A15.905 15.905 0 0 0 13.97 13h-3.94zm9.908 0h-3.965a17.9 17.9 0 0 1-1.683 6.667A8.008 8.008 0 0 0 19.938 13zM4.062 11h3.965A17.9 17.9 0 0 1 9.71 4.333 8.008 8.008 0 0 0 4.062 11zm5.969 0h3.938A15.905 15.905 0 0 0 12 4.248 15.905 15.905 0 0 0 10.03 11zm4.259-6.667A17.9 17.9 0 0 1 15.973 11h3.965a8.008 8.008 0 0 0-5.648-6.667z"></path>
+                                </g>
+                            </svg>
+                            Web開發挑戰營
+                        </a>
+                    </div>
+
+                    <p class="text-gray-600 text-md pl-8">
+                        是不是十分期待營隊的課程呢? 在這三天的營隊裡，你會比你同學多學到網站架設及維護的技術，同時，我們也會教授一些資訊安全的知識，倘若未來想走相關科系或準備相關競賽會十分有優勢喔!
+                    </p>
+
+                    <hr class="my-8"/>
+
+                    <iframe :src="`https://docs.google.com/forms/d/e/1FAIpQLSdYrhG0zpeJSRNspx5VtADbYb0gy2hNv2ipqYWTVbZ3TnhjZw/viewform?embedded=true&usp=pp_url&entry.1922543100=${source.coupon}`" class="w-full" height="640" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Footer-->
+<footer class="bg-white">
+    <div class="container mx-auto px-8">
+        <div class="w-full flex flex-col md:flex-row py-6">
+            <div class="flex-1 mb-6 text-black">
+                <a class="text-pink-600 no-underline hover:no-underline font-bold text-2xl" href="index.html">
+                    <svg id="icon-globe" class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg"
+                         viewBox="0 0 24 24">
+                        <g class="globe1">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-2.29-2.333A17.9 17.9 0 0 1 8.027 13H4.062a8.008 8.008 0 0 0 5.648 6.667zM10.03 13c.151 2.439.848 4.73 1.97 6.752A15.905 15.905 0 0 0 13.97 13h-3.94zm9.908 0h-3.965a17.9 17.9 0 0 1-1.683 6.667A8.008 8.008 0 0 0 19.938 13zM4.062 11h3.965A17.9 17.9 0 0 1 9.71 4.333 8.008 8.008 0 0 0 4.062 11zm5.969 0h3.938A15.905 15.905 0 0 0 12 4.248 15.905 15.905 0 0 0 10.03 11zm4.259-6.667A17.9 17.9 0 0 1 15.973 11h3.965a8.008 8.008 0 0 0-5.648-6.667z"></path>
+                        </g>
+                    </svg>
+                    Web開發挑戰營
+                </a>
+            </div>
+            <div class="">
+                <p class="uppercase text-gray-500 md:mb-6">網站連結</p>
+                <ul class="list-reset mb-6">
+                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                        <a href="https://aplusplus.education?utm_source=WebCamp&utm_medium=website&utm_campaign=website"
+                           class="no-underline hover:underline text-gray-800 hover:text-pink-500" target="_blank">A++程式設計</a>
+                    </li>
+                    <!--
+                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">About Us</a>
+                    </li>
+                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
+                    </li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+
+    const SalesSource = {
+        'tnfsh': {
+            name: "台南一中",
+            personCall: '同學',
+            sales: '7折',
+            coupon: 'TNFSH_SUMMER'
+        }
+    }
+    let search = (new URL(document.location)).searchParams
+    let source = SalesSource[search.get('source')] ?? null
+
+    if (!source) {
+        location.href = 'index.html'
+    }
+    Vue.createApp({
+        data() {
+            return {
+                source
+            }
+        }
+    }).mount('#app')
+</script>
+<script>
+    /*Toggle dropdown list*/
+    /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+
+    var navMenuDiv = document.getElementById("nav-content");
+    var navMenu = document.getElementById("nav-toggle");
+
+    document.onclick = check;
+
+    function check(e) {
+        var target = (e && e.target) || (event && event.srcElement);
+
+        //Nav Menu
+        if (!checkParent(target, navMenuDiv)) {
+            // click NOT on the menu
+            if (checkParent(target, navMenu)) {
+                // click on the link
+                if (navMenuDiv.classList.contains("hidden")) {
+                    navMenuDiv.classList.remove("hidden");
+                } else {
+                    navMenuDiv.classList.add("hidden");
+                }
+            } else {
+                // click both outside link and outside menu, hide menu
+                navMenuDiv.classList.add("hidden");
+            }
+        }
+    }
+
+    function checkParent(t, elm) {
+        while (t.parentNode) {
+            if (t === elm) {
+                return true;
+            }
+            t = t.parentNode;
+        }
+        return false;
+    }
+</script>
+</body>
+</html>
