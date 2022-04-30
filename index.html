@@ -645,6 +645,7 @@
 
     document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('#inclass_sales').style.display = 'none'
+        document.querySelector('#bi_group_sales').style.display = 'none'
         document.querySelector('#online_course').style.display = 'none'
     })
 
@@ -652,10 +653,12 @@
         if (document.querySelector('#inclass_sales').style.display === 'none') {
             document.querySelector('#btn_show_others').innerText = '▼ 查看其他方案'
             document.querySelector('#inclass_sales').style.display = 'block'
+            document.querySelector('#bi_group_sales').style.display = 'block'
             document.querySelector('#online_course').style.display = 'block'
         } else {
             document.querySelector('#btn_show_others').innerText = '▶ 查看其他方案'
             document.querySelector('#inclass_sales').style.display = 'none'
+            document.querySelector('#bi_group_sales').style.display = 'none'
             document.querySelector('#online_course').style.display = 'none'
         }
     })
