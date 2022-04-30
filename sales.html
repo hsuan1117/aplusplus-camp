@@ -152,7 +152,12 @@
 
                     <hr class="my-8"/>
 
-                    <iframe :src="`https://docs.google.com/forms/d/e/1FAIpQLSeMtzvvbB4KDmEoYjaKh7QfqEE-eNWylWix5GxPf8pf6I4GIw/viewform?embedded=true&usp=pp_url&entry.1199805853=其他優惠&entry.1578404361=${source.coupon}_${source.sales}`"
+                    <p class="text-gray-600 text-lg pl-8 font-bold">
+                        請您備齊 {{ source.requirement }} ，填寫表單時上傳。<br/>
+                        優惠後價格為: 新台幣${{ source.price }}元 / 人
+                    </p>
+
+                    <iframe :src="`https://docs.google.com/forms/d/e/1FAIpQLSeMtzvvbB4KDmEoYjaKh7QfqEE-eNWylWix5GxPf8pf6I4GIw/viewform?embedded=true&usp=pp_url&entry.1199805853=其他優惠&entry.1189785392=${source.price}&entry.1578404361=${source.coupon}_${source.sales}`"
                             class="w-full" height="1400" frameborder="0" marginheight="0" marginwidth="0">載入中…
                     </iframe>
                 </div>
@@ -204,6 +209,8 @@
             name: "台南一中",
             personCall: '同學',
             sales: '7折',
+            price: '4200',
+            requirement: '台南一中學生證',
             coupon: 'TNFSH_SUMMER'
         }
     }
