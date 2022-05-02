@@ -234,7 +234,15 @@
             price: '4200',
             requirement: '台南一中學生證',
             coupon: 'TNFSH_SUMMER'
-        }
+        },
+        'ccsh': {
+            name: "家齊高中",
+            personCall: '同學',
+            sales: '9折',
+            price: '5400',
+            requirement: '家齊高中學生證',
+            coupon: 'CCSH_SUMMER'
+        },
     }
     let search = (new URL(document.location)).searchParams
     let source = SalesSource[search.get('source')] ?? null
