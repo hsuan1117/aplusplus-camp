@@ -251,6 +251,14 @@
             requirement: '家齊高中學生證',
             coupon: 'CCSH_SUMMER'
         },
+        'APCS': {
+            name: "APCS 社團",
+            personCall: '社員',
+            sales: '9折',
+            price: '5400',
+            requirement: '參加APCS社團的截圖',
+            coupon: 'APCS_CLUB'
+        },
     }
     let search = (new URL(document.location)).searchParams
     let source = SalesSource[search.get('source')] ?? null
