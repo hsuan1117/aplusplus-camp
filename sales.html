@@ -287,6 +287,14 @@
             requirement: '參加APCS社團的截圖',
             coupon: 'APCS_CLUB'
         },
+        'MAIL': {
+            name: "電子報行銷",
+            personCall: '',
+            sales: '',
+            price: '4999',
+            requirement: '',
+            coupon: 'MAIL_CUSTOM'
+        },
     }
     let search = (new URL(document.location)).searchParams
     let source = SalesSource[search.get('source')] ?? null
